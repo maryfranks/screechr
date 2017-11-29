@@ -1,0 +1,2 @@
+class ScreechesController < ApplicationController
+end
