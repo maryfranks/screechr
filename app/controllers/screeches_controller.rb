@@ -21,7 +21,7 @@ class ScreechesController < ApplicationController
   end
 
   def update
-    @screetch = Screech.find(params[:id])
+    @screech = Screech.find(params[:id])
     @screech.update(screech_params)
   end
 
