@@ -3,14 +3,6 @@ class ScreechesController < ApplicationController
   def index
     @screeches = Screech.all
 
-    respond_to do | format |
-
-      format.json do
-        render json: @screeches
-      end
-
-    end
-
   end
 
   def new
@@ -20,7 +12,6 @@ class ScreechesController < ApplicationController
 
   def create
     @screech = Screech.new(screech_params)
-    # render json: @screech
     if @screech.save
       redirect_to screeches_path
     else
