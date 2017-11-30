@@ -6,6 +6,7 @@ class ScreechesControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     sign_in_as users(:chattycathy)
+    @user = users(:chattycathy)
   end
 
   test "index" do
@@ -14,12 +15,10 @@ class ScreechesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create" do
-    skip
-
     assert_difference('Screech.count') do
-      post screeches_url, params: { screech: { content: 'new screech' } }
+      post screeches_url, params: { screech: { user_id: @user.id, content: 'new screech' } }
     end
-
+    assert_redirected_to screeches_path
   end
 
 end
