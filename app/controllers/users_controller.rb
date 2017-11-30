@@ -7,32 +7,21 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
-      flash.now[:notice] = 'Account successfully created!'
-      redirect_to user_path
-    else
-      flash.now[:error] = 'Sorry, try again!'
-      render :new
-    end
+    @user.save
   end
 
   def update
-
+    @user = current_user
+    @user.update(user_params)
   end
 
   def edit
-
+    @user = current_user
   end
 
   def show
     @user = current_user
-    respond_to do | format |
-
-      format.json do
-        render json: @user
-      end
-
-    end
+    # byebug
   end
 
   private
