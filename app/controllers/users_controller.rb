@@ -11,15 +11,17 @@ class UsersController < ApplicationController
   end
 
   def update
-
+    @user = current_user
+    @user.update(user_params)
   end
 
   def edit
-
+    @user = current_user
   end
 
   def show
     @user = current_user
+    # byebug
   end
 
   private
