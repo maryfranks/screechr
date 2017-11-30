@@ -18,7 +18,6 @@ class ScreechesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Screech.count') do
       post screeches_url, params: { screech: { user_id: @user.id, content: 'new screech' } }
     end
-    assert_redirected_to screeches_path
   end
 
 end

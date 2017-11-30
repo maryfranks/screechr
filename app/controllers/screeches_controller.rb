@@ -12,19 +12,17 @@ class ScreechesController < ApplicationController
 
   def create
     @screech = Screech.new(screech_params)
-    if @screech.save
-      redirect_to screeches_path
-    else
-      render new_screech_path
-    end
+    @screech.save
   end
 
   def edit
+    @screech = Screech.find(params[:id])
 
   end
 
   def update
-
+    @screetch = Screech.find(params[:id])
+    @screech.update(screech_params)
   end
 
   private
