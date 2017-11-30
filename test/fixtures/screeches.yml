@@ -4,8 +4,34 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+chatty_washout:
+  user: chattycathy
+  content: "Washouts on wardens and adjuncts on islands, Stringed bumpy returns and loose leaky highlands"
+
+chatty_handguns:
+  user: chattycathy
+  content: "Handguns on hawkers and oysters on quarters, Wry ostrich spiders and deaf addled transporters"
+
+chatty_showers:
+  user: chattycathy
+  content: "Showers on shelters and dragons on lackeys, Swart daily mishaps and blue bubbly jackeys"
+
+chatty_grime:
+  user: chattycathy
+  content: "Grime in vile staples with rear feathered fevers, Fathoms that weigh on my jig and receivers"
+
+chatty_slack:
+    user: chattycathy
+    content: "Slack fearless fingernails liked up with bows, These are a few of my favorite ploughs"
+
+regular_hellenism:
+  user: regularguy
+  content: "a Hellenism is an antonym: squintier and troublefree"
+
+regular_rhino:
+    user: regularguy
+    content: "a rhino is a wheelhouse: Algerine yet pardoned"
+
+regular_dreadnaught:
+    user: regularguy
+    content: "a dreadnaught is a zoölogy: infinito and measurable"
