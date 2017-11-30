@@ -13,16 +13,14 @@ class ScreechesController < ApplicationController
 
   end
 
-  def show
-
-  end
-
   def new
     @screech = Screech.new
+    render json: @screech
   end
 
   def create
     @screech = Screech.new(screech_params)
+    # render json: @screech
     if @screech.save
       redirect_to screeches_path
     else
@@ -41,7 +39,7 @@ class ScreechesController < ApplicationController
   private
 
   def screech_params
-    params.require(:screech).permit(:user_id, :content) 
+    params.require(:screech).permit(:user_id, :content)
   end
 
 end

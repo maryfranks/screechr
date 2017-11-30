@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
   def new
     @user = User.new
   end
@@ -25,6 +26,13 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    respond_to do | format |
+
+      format.json do
+        render json: @user
+      end
+
+    end
   end
 
   private
