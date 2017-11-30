@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :screeches
-  resource :user
+  resources :screeches, defaults: {format: :json}
+  resource :user, defaults: {format: :json}
 end
